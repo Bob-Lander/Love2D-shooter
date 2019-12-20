@@ -2,7 +2,7 @@ function love.load()
   manateeImage = love.graphics.newImage("resources/images/manatee.png")
   shockwaveImage = love.graphics.newImage("resources/images/shockwave.png")
 
-  player = {xPos = 0, yPos = 0, width = 64, height = 64, speed=200, img=submarineImage}
+  player = {xPos = 0, yPos = 0, width = 64, height = 64, speed=200, img=manateeImage}
   shockwaves = {}
 
   canFire = false
@@ -13,10 +13,9 @@ function love.load()
 end
 
 function love.draw()
-  love.graphics.setColor(186, 255, 255)
+  love.graphics.setColor(0, 0, 160)
   background = love.graphics.rectangle("fill", 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
   love.graphics.setColor(255, 255, 255)
-
   love.graphics.draw(player.img, player.xPos, player.yPos, 0, 0.5, 0.5)
   for index, shockwave in ipairs(shockwaves) do
     love.graphics.draw(shockwave.img, shockwave.xPos, shockwave.yPos)
@@ -25,7 +24,7 @@ end
 
 function love.update(dt)
   updatePlayer(dt)
-  updateTorpedoes(dt)
+  updateShockwaves(dt)
 end
 
 function updatePlayer(dt)
@@ -38,21 +37,21 @@ function updatePlayer(dt)
   downUp = down or up
   leftRight = left or right
 
-  speed = playerSpeed
+  speed = player.speed
   if(downUp and leftRight) then
     speed = speed / math.sqrt(2)
   end
 
-  if down and yPos<love.graphics.getHeight()-playerHeight then
-    yPos = yPos + dt * speed
-  elseif up and yPos>0 then
-    yPos = yPos - dt * speed
+  if down and player.yPos<love.graphics.getHeight()-player.height then
+    player.yPos = player.yPos + dt * speed
+  elseif up and player.yPos>0 then
+    player.yPos = player.yPos - dt * speed
   end
 
-  if right and xPos<love.graphics.getWidth()-playerWidth then
-    xPos = xPos + dt * speed
-  elseif left and xPos>0 then
-    xPos = xPos - dt * speed
+  if right and player.xPos<love.graphics.getWidth()-player.width then
+    player.xPos = player.xPos + dt * speed
+  elseif left and player.xPos>0 then
+    player.xPos = player.xPos - dt * speed
   end
 
   --Shockwave movement
@@ -63,12 +62,34 @@ function updatePlayer(dt)
     elseif(right) then
       shockwaveSpeed = shockwaveSpeed + player.speed/2
     end
-    spawnshockwave(player.xPos + player.width, player.yPos + player.height/2, shockwaveSpeed)
+    spawnShockwave(player.xPos + player.width, player.yPos + player.height/2, shockwaveSpeed)
   end
 
   if shockwaveTimer > 0 then
-    shockwaveTimer = torpedoTimer - dt
+    shockwaveTimer = shockwaveTimer - dt
   else
     canFire = true
+  end
+end
+
+function spawnShockwave(x, y, speed)
+  if canFire then
+    shockwave = {xPos = x, yPos = y, width = 16, height=16, speed=speed, img = shockwaveImage}
+    table.insert(shockwaves, shockwave)
+
+    canFire = false
+    shockwaveTimer = shockwaveTimerMax
+  end
+end
+
+function updateShockwaves(dt)
+  for index, shockwave in ipairs(shockwaves) do
+    shockwave.xPos = shockwave.xPos + dt * shockwave.speed
+    if shockwave.speed < shockwaveMaxSpeed then
+      shockwave.speed = shockwave.speed + dt * 100
+    end
+    if shockwave.xPos > love.graphics.getWidth() then
+      table.remove(shockwaves, index)
+    end
   end
 end
