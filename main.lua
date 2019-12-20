@@ -1,14 +1,19 @@
 function love.load()
-  xPos = 0
-  yPos = 0
-  playerWidth = 64
-  playerHeight = 64
-  playerSpeed = 200
   manateeImage = love.graphics.newImage("resources/images/manatee.png")
+  shockwaveImage = love.graphics.newImage("resources/images/shockwave.png")
+
+  player = {xPos = 0, yPos = 0, width = 64, height = 64, speed=200, img=submarineImage}
+  shockwaves = {}
+
+  canFire = false
+  shockwaveTimerMax = 0.2
+  shockwaveTimer = shockwaveTimerMax
+  shockwaveStartSpeed = 100
+  shockwaveMaxSpeed = 300
 end
 
 function love.draw()
-  love.graphics.draw(manateeImage, xPos, yPos, 0, 0.5, 0.5)
+  love.graphics.draw(manateeImage, xPos, yPos, 0, 0.3, 0.3)
 end
 
 function love.update(dt)
