@@ -21,7 +21,7 @@ function love.load()
 end
 
 function startGame()
-  player = {xPos = 0, yPos = 0, width = 100, height = 64, speed=200, img=manateeImage}
+  player = {xPos = 0, yPos = 0, width = 128, height = 64, speed=200, img=manateeImage}
   shockwaves = {}
   enemies = {}
 
