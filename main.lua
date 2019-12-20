@@ -2,7 +2,7 @@ function love.load()
   manateeImage = love.graphics.newImage("resources/images/manatee.png")
   shockwaveImage = love.graphics.newImage("resources/images/shockwave.png")
 
-  player = {xPos = 0, yPos = 0, width = 128, height = 8, speed=200, img=manateeImage}
+  player = {xPos = 0, yPos = 0, width = 100, height = 64, speed=200, img=manateeImage}
   shockwaves = {}
 
   canFire = false
@@ -62,7 +62,7 @@ function updatePlayer(dt)
     elseif(right) then
       shockwaveSpeed = shockwaveSpeed + player.speed/2
     end
-    spawnShockwave(player.xPos + player.width, player.yPos + player.height/2, shockwaveSpeed)
+    spawnShockwave(player.xPos + player.width, player.yPos, shockwaveSpeed)
   end
 
   if shockwaveTimer > 0 then
