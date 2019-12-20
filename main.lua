@@ -1,15 +1,33 @@
 function love.load()
   manateeImage = love.graphics.newImage("resources/images/manatee.png")
   shockwaveImage = love.graphics.newImage("resources/images/shockwave.png")
+  squidImage = love.graphics.newImage("resources/images/squid.png")
+  sharkImage = love.graphics.newImage("resources/images/submarine.png")
+  swordfishImage = love.graphics.newImage("resources/images/swordfish.png")
 
-  player = {xPos = 0, yPos = 0, width = 100, height = 64, speed=200, img=manateeImage}
-  shockwaves = {}
-
-  canFire = false
   shockwaveTimerMax = 0.3
   shockwaveTimer = shockwaveTimerMax
   shockwaveStartSpeed = 100
   shockwaveMaxSpeed = 300
+
+  squidSpeed = 200
+  sharkSpeed = 250
+  swordfishSpeed = 300
+  chargeSpeed = 500
+
+  spawnTimerMax = 0.5
+
+  startGame()
+end
+
+function startGame()
+  player = {xPos = 0, yPos = 0, width = 100, height = 64, speed=200, img=manateeImage}
+  shockwaves = {}
+  enemies = {}
+
+  canFire = true
+  shockwaveTimer = shockwaveTimerMax
+  spawnTimer = 0
 end
 
 function love.draw()
