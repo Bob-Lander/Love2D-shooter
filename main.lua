@@ -3,7 +3,7 @@ function love.load()
   shockwaveImage = love.graphics.newImage("resources/images/shockwave.png")
   squidImage = love.graphics.newImage("resources/images/squid.png")
   sharkImage = love.graphics.newImage("resources/images/submarine.png")
-  swordfishImage = love.graphics.newImage("resources/images/swordfish.png")
+  swordfishImage = love.graphics.newImage("resources/images/shark.png")
 
   shockwaveTimerMax = 0.3
   shockwaveTimer = shockwaveTimerMax
