@@ -24,23 +24,51 @@ function love.draw()
 end
 
 function love.update(dt)
-  downUp = love.keyboard.isDown("down") or love.keyboard.isDown("up")
-  leftRight = love.keyboard.isDown("left") or love.keyboard.isDown("right")
+  updatePlayer(dt)
+  updateTorpedoes(dt)
+end
+
+function updatePlayer(dt)
+  down = love.keyboard.isDown("down")
+  up = love.keyboard.isDown("up")
+  left = love.keyboard.isDown("left")
+  right = love.keyboard.isDown("right")
+
+  --Player movement 
+  downUp = down or up
+  leftRight = left or right
 
   speed = playerSpeed
   if(downUp and leftRight) then
     speed = speed / math.sqrt(2)
   end
 
-  if love.keyboard.isDown("down") and yPos<love.graphics.getHeight()-playerHeight then
+  if down and yPos<love.graphics.getHeight()-playerHeight then
     yPos = yPos + dt * speed
-  elseif love.keyboard.isDown("up") and yPos>0 then
+  elseif up and yPos>0 then
     yPos = yPos - dt * speed
   end
 
-  if love.keyboard.isDown("right") and xPos<love.graphics.getWidth()-playerWidth then
+  if right and xPos<love.graphics.getWidth()-playerWidth then
     xPos = xPos + dt * speed
-  elseif love.keyboard.isDown("left") and xPos>0 then
+  elseif left and xPos>0 then
     xPos = xPos - dt * speed
+  end
+
+  --Shockwave movement
+  if love.keyboard.isDown("space") then
+    shockwaveSpeed = shockwaveStartSpeed
+    if(left) then
+      shockwaveSpeed = shockwaveSpeed - player.speed/2
+    elseif(right) then
+      shockwaveSpeed = shockwaveSpeed + player.speed/2
+    end
+    spawnshockwave(player.xPos + player.width, player.yPos + player.height/2, shockwaveSpeed)
+  end
+
+  if shockwaveTimer > 0 then
+    shockwaveTimer = torpedoTimer - dt
+  else
+    canFire = true
   end
 end
