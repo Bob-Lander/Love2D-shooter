@@ -2,8 +2,8 @@ function love.load()
   manateeImage = love.graphics.newImage("resources/images/manatee.png")
   shockwaveImage = love.graphics.newImage("resources/images/shockwave.png")
   squidImage = love.graphics.newImage("resources/images/squid.png")
-  sharkImage = love.graphics.newImage("resources/images/submarine.png")
-  swordfishImage = love.graphics.newImage("resources/images/shark.png")
+  sharkImage = love.graphics.newImage("resources/images/shark.png")
+  submarineImage = love.graphics.newImage("resources/images/submarine.png")
 
   shockwaveTimerMax = 0.3
   shockwaveTimer = shockwaveTimerMax
@@ -12,7 +12,7 @@ function love.load()
 
   squidSpeed = 200
   sharkSpeed = 250
-  swordfishSpeed = 300
+  submarineSpeed = 300
   chargeSpeed = 500
 
   spawnTimerMax = 0.5
@@ -42,6 +42,7 @@ end
 
 function love.update(dt)
   updatePlayer(dt)
+  updateEnemies()
   updateShockwaves(dt)
 end
 
@@ -80,7 +81,7 @@ function updatePlayer(dt)
     elseif(right) then
       shockwaveSpeed = shockwaveSpeed + player.speed/2
     end
-    spawnShockwave(player.xPos + player.width, player.yPos, shockwaveSpeed)
+    spawnShockwave(player.xPos + player.width, player.yPos + player.height/3, shockwaveSpeed)
   end
 
   if shockwaveTimer > 0 then
@@ -109,5 +110,101 @@ function updateShockwaves(dt)
     if shockwave.xPos > love.graphics.getWidth() then
       table.remove(shockwaves, index)
     end
+  end
+end
+
+function updateEnemies(dt)
+  if spawnTimer > 0 then
+    spawnTimer = spawnTimer - dt
+  else
+    spawnEnemy()
+  end
+
+  for i=table.getn(enemies), 1, -1 do
+    enemy=enemies[i]
+    enemy.update = enemy:update(dt)
+    if enemy.xPos < -enemy.width then
+      table.remove(enemies, i)
+    end
+  end
+end
+
+Enemy = {xPos = love.graphics.getWidth(), yPos = 0, width = 64, height = 64}
+function Enemy:new (o)
+  o = o or {}
+  setmetatable(o, self)
+  self.__index = self
+  return o
+end
+
+function spawnEnemy()
+  y = love.math.random(0, love.graphics.getHeight() - 64)
+  enemyType = love.math.random(0, 2)
+  if enemyType == 0 then
+    enemy = Enemy:new{yPos = y, speed = squidSpeed, img = squidImage, update=moveLeft}
+  elseif enemyType == 1 then
+    enemy = Enemy:new{yPos = y, speed = sharkSpeed, img = sharkImage, update=moveToPlayer}
+  else
+    enemy = Enemy:new{yPos = y, speed = submarineSpeed, img = submarineImage, update=chargePlayer}
+  end
+  table.insert(enemies, enemy)
+
+  spawnTimer = spawnTimerMax
+end
+
+function moveLeft(obj, dt)
+  obj.xPos = obj.xPos - obj.speed * dt
+  return moveLeft
+end
+
+function moveToPlayer(obj, dt)
+  xSpeed = math.sin(math.rad (60)) * obj.speed
+  ySpeed = math.cos(math.rad (60)) * obj.speed
+  if (obj.yPos - player.yPos) > 10 then
+    obj.yPos = obj.yPos - ySpeed * dt
+    obj.xPos = obj.xPos - xSpeed * dt
+  elseif (obj.yPos - player.yPos) < -10 then
+    obj.yPos = obj.yPos + ySpeed * dt
+    obj.xPos = obj.xPos - xSpeed * dt
+  else
+    obj.xPos = obj.xPos - obj.speed * dt
+  end
+  return moveToPlayer
+end
+
+function chargePlayer(obj, dt)
+  xDistance = math.abs(obj.xPos - player.xPos)
+  yDistance = math.abs(obj.yPos - player.yPos)
+  distance = math.sqrt(yDistance^2 + xDistance^2)
+  if distance < 150 then
+    obj.speed = chargeSpeed
+    return moveLeft
+  end 
+  moveToPlayer(obj, dt)
+  return chargePlayer
+end
+
+function checkCollisions()
+  for index, enemy in ipairs(enemies) do
+    if intersects(player, enemy) or intersects(enemy, player) then
+      startGame()
+    end
+
+    for index2, shockwave in ipairs(shockwaves) do
+      if intersects(enemy, shockwave) then
+        table.remove(enemies, index)
+        table.remove(shockwaves, index2)
+        break
+      end
+    end
+  end
+end
+
+function intersects(rect1, rect2)
+  if rect1.xPos < rect2.xPos and rect1.xPos + rect1.width > rect2.xPos and
+     rect1.yPos < rect2.yPos and rect1.yPos + rect1.height > rect2.yPos then
+    return true
+  else
+    return false
   end
 end
