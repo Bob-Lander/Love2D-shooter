@@ -1,624 +1,427 @@
-[ 80686.206] _XSERVTransmkdir: Owner of /tmp/.X11-unix should be set to root
-[ 80686.207] 
+[ 16898.573] _XSERVTransmkdir: ERROR: euid != 0,directory /tmp/.X11-unix will not be created.
+[ 16898.575] 
 X.Org X Server 1.19.6
 Release Date: 2017-12-20
-[ 80686.207] X Protocol Version 11, Revision 0
-[ 80686.207] Build Operating System: Linux 4.4.0-148-generic x86_64 Ubuntu
-[ 80686.207] Current Operating System: Linux d5bf49be7992 4.15.0-1036-gcp #38~16.04.1-Ubuntu SMP Tue Jun 25 15:30:46 UTC 2019 x86_64
-[ 80686.207] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-1036-gcp root=LABEL=cloudimg-rootfs ro scsi_mod.use_blk_mq=Y console=ttyS0
-[ 80686.207] Build Date: 03 June 2019  08:10:35AM
-[ 80686.207] xorg-server 2:1.19.6-1ubuntu4.3 (For technical support please see http://www.ubuntu.com/support) 
-[ 80686.207] Current version of pixman: 0.34.0
-[ 80686.207] 	Before reporting problems, check http://wiki.x.org
+[ 16898.576] X Protocol Version 11, Revision 0
+[ 16898.576] Build Operating System: Linux 4.4.0-148-generic x86_64 Ubuntu
+[ 16898.576] Current Operating System: Linux 3fcea4a36fb4 4.15.0-1036-gcp #38~16.04.1-Ubuntu SMP Tue Jun 25 15:30:46 UTC 2019 x86_64
+[ 16898.576] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-4.15.0-1036-gcp root=LABEL=cloudimg-rootfs ro scsi_mod.use_blk_mq=Y console=ttyS0
+[ 16898.576] Build Date: 03 June 2019  08:10:35AM
+[ 16898.576] xorg-server 2:1.19.6-1ubuntu4.3 (For technical support please see http://www.ubuntu.com/support) 
+[ 16898.576] Current version of pixman: 0.34.0
+[ 16898.576] 	Before reporting problems, check http://wiki.x.org
 	to make sure that you have the latest version.
-[ 80686.207] Markers: (--) probed, (**) from config file, (==) default setting,
+[ 16898.576] Markers: (--) probed, (**) from config file, (==) default setting,
 	(++) from command line, (!!) notice, (II) informational,
 	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
-[ 80686.207] (++) Log file: "/home/runner/.x.log", Time: Fri Dec 20 08:02:42 2019
-[ 80686.207] (++) Using config file: "/opt/xorg.conf"
-[ 80686.207] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
-[ 80686.208] (==) ServerLayout "dummy_layout"
-[ 80686.208] (**) |-->Screen "dummy_screen" (0)
-[ 80686.208] (**) |   |-->Monitor "dummy_monitor"
-[ 80686.209] (**) |   |-->Device "dummy_videocard"
-[ 80686.209] (**) |-->Input Device "dummy_mouse"
-[ 80686.209] (**) |-->Input Device "dummy_keyboard"
-[ 80686.209] (**) Option "DontVTSwitch" "true"
-[ 80686.209] (**) Option "AllowMouseOpenFail" "true"
-[ 80686.209] (**) Option "AutoAddDevices" "false"
-[ 80686.209] (**) Option "AutoEnableDevices" "false"
-[ 80686.209] (**) Not automatically adding devices
-[ 80686.209] (**) Not automatically enabling devices
-[ 80686.209] (==) Automatically adding GPU devices
-[ 80686.209] (==) Automatically binding GPU devices
-[ 80686.209] (==) Max clients allowed: 256, resource mask: 0x1fffff
-[ 80686.209] (WW) The directory "/usr/share/fonts/X11/cyrillic" does not exist.
-[ 80686.209] 	Entry deleted from font path.
-[ 80686.209] (WW) The directory "/usr/share/fonts/X11/100dpi/" does not exist.
-[ 80686.209] 	Entry deleted from font path.
-[ 80686.209] (WW) The directory "/usr/share/fonts/X11/75dpi/" does not exist.
-[ 80686.209] 	Entry deleted from font path.
-[ 80686.209] (WW) The directory "/usr/share/fonts/X11/Type1" does not exist.
-[ 80686.209] 	Entry deleted from font path.
-[ 80686.209] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
-[ 80686.209] 	Entry deleted from font path.
-[ 80686.209] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
-[ 80686.209] 	Entry deleted from font path.
-[ 80686.209] (==) FontPath set to:
+[ 16898.577] (++) Log file: "/home/runner/.x.log", Time: Fri Dec 20 08:56:34 2019
+[ 16898.577] (++) Using config file: "/opt/xorg.conf"
+[ 16898.577] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[ 16898.577] (==) ServerLayout "dummy_layout"
+[ 16898.578] (**) |-->Screen "dummy_screen" (0)
+[ 16898.578] (**) |   |-->Monitor "dummy_monitor"
+[ 16898.578] (**) |   |-->Device "dummy_videocard"
+[ 16898.578] (**) |-->Input Device "dummy_mouse"
+[ 16898.578] (**) |-->Input Device "dummy_keyboard"
+[ 16898.579] (**) Option "DontVTSwitch" "true"
+[ 16898.579] (**) Option "AllowMouseOpenFail" "true"
+[ 16898.579] (**) Option "AutoAddDevices" "false"
+[ 16898.579] (**) Option "AutoEnableDevices" "false"
+[ 16898.579] (**) Not automatically adding devices
+[ 16898.579] (**) Not automatically enabling devices
+[ 16898.579] (==) Automatically adding GPU devices
+[ 16898.579] (==) Automatically binding GPU devices
+[ 16898.579] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[ 16898.580] (WW) The directory "/usr/share/fonts/X11/cyrillic" does not exist.
+[ 16898.580] 	Entry deleted from font path.
+[ 16898.581] (WW) The directory "/usr/share/fonts/X11/100dpi/" does not exist.
+[ 16898.581] 	Entry deleted from font path.
+[ 16898.581] (WW) The directory "/usr/share/fonts/X11/75dpi/" does not exist.
+[ 16898.581] 	Entry deleted from font path.
+[ 16898.581] (WW) The directory "/usr/share/fonts/X11/Type1" does not exist.
+[ 16898.581] 	Entry deleted from font path.
+[ 16898.581] (WW) The directory "/usr/share/fonts/X11/100dpi" does not exist.
+[ 16898.581] 	Entry deleted from font path.
+[ 16898.581] (WW) The directory "/usr/share/fonts/X11/75dpi" does not exist.
+[ 16898.581] 	Entry deleted from font path.
+[ 16898.581] (==) FontPath set to:
 	/usr/share/fonts/X11/misc,
 	built-ins
-[ 80686.209] (==) ModulePath set to "/usr/lib/xorg/modules"
-[ 80686.209] (II) Loader magic: 0x55abfc274020
-[ 80686.209] (II) Module ABI versions:
-[ 80686.209] 	X.Org ANSI C Emulation: 0.4
-[ 80686.209] 	X.Org Video Driver: 23.0
-[ 80686.209] 	X.Org XInput driver : 24.1
-[ 80686.209] 	X.Org Server Extension : 10.0
-[ 80686.209] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80686.212] (II) no primary bus or device found
-[ 80686.212] (II) LoadModule: "glx"
-[ 80686.212] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
-[ 80686.214] (II) Module glx: vendor="X.Org Foundation"
-[ 80686.214] 	compiled for 1.19.6, module version = 1.0.0
-[ 80686.214] 	ABI class: X.Org Server Extension, version 10.0
-[ 80686.214] (II) LoadModule: "dummy"
-[ 80686.214] (II) Loading /usr/lib/xorg/modules/drivers/dummy_drv.so
-[ 80686.214] (II) Module dummy: vendor="X.Org Foundation"
-[ 80686.214] 	compiled for 1.19.3, module version = 0.3.8
-[ 80686.214] 	Module class: X.Org Video Driver
-[ 80686.214] 	ABI class: X.Org Video Driver, version 23.0
-[ 80686.214] (II) LoadModule: "void"
-[ 80686.214] (WW) Warning, couldn't open module void
-[ 80686.214] (II) UnloadModule: "void"
-[ 80686.214] (II) Unloading void
-[ 80686.214] (EE) Failed to load module "void" (module does not exist, 0)
-[ 80686.214] (II) DUMMY: Driver for Dummy chipsets: dummy
-[ 80686.214] (WW) Falling back to old probe method for dummy
-[ 80686.214] (WW) VGA arbiter: cannot open kernel arbiter, no multi-card support
-[ 80686.214] (II) DUMMY(0): Chipset is a DUMMY
-[ 80686.214] (**) DUMMY(0): Depth 24, (--) framebuffer bpp 32
-[ 80686.214] (==) DUMMY(0): RGB weight 888
-[ 80686.215] (==) DUMMY(0): Default visual is TrueColor
-[ 80686.215] (==) DUMMY(0): Using gamma correction (1.0, 1.0, 1.0)
-[ 80686.215] (DB) xf86MergeOutputClassOptions unsupported bus type 0
-[ 80686.215] (**) DUMMY(0): VideoRAM: 192000 kByte
-[ 80686.215] (--) DUMMY(0): Max Clock: 300000 kHz
-[ 80686.215] (II) DUMMY(0): dummy_monitor: Using hsync range of 5.00-1000.00 kHz
-[ 80686.215] (II) DUMMY(0): dummy_monitor: Using vrefresh range of 5.00-200.00 Hz
-[ 80686.215] (II) DUMMY(0): Clock range:  11.00 to 300.00 MHz
-[ 80686.215] (II) DUMMY(0): Not using mode "32768x32768" (insufficient memory for mode)
-[ 80686.215] (II) DUMMY(0): Not using mode "32768x16384" (insufficient memory for mode)
-[ 80686.215] (II) DUMMY(0): Not using mode "16384x8192" (insufficient memory for mode)
-[ 80686.215] (II) DUMMY(0): Not using mode "8192x4096" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "5496x1200" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "5280x1080" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "5280x1200" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "5120x3200" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "4800x1200" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "3840x2880" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "3840x2560" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "3840x2048" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "3840x1080" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "3600x1200" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "3288x1080" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "2048x2048" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "2048x1536" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "2560x1600" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "2560x1440" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1920x1440" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1920x1200" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1920x1080" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1680x1050" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1600x1200" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1600x900" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1440x900" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1366x768" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1280x1024" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1280x800" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1280x768" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1360x768" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1024x768" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "768x1024" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "800x1280" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1280x800" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "720x1280" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1280x720" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "768x1024" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1024x768" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "600x1024" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1024x600" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "536x960" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "960x536" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "600x800" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "480x854" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "848x480" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "480x800" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "800x1242" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1280x762" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "720x1242" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1280x682" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "768x986" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1024x730" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "600x986" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "1024x562" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "536x922" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "960x498" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "600x762" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "480x810" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "848x442" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using mode "480x762" (height too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1024x768i" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1280x960" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1280x960" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1792x1344" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "896x672" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1792x1344" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "896x672" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1856x1392" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "928x696" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1856x1392" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "928x696" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "960x720" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "960x720" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "832x624" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1400x1050" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1400x1050" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1400x1050" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1400x1050" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "1600x1024" (width too large for virtual size)
-[ 80686.215] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "960x600" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "960x720" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "320x180" (bad mode clock/interlace/doublescan)
-[ 80686.216] (II) DUMMY(0): Not using default mode "320x180" (bad mode clock/interlace/doublescan)
-[ 80686.216] (II) DUMMY(0): Not using default mode "720x405" (monitor doesn't support reduced blanking)
-[ 80686.216] (II) DUMMY(0): Not using default mode "360x202" (bad mode clock/interlace/doublescan)
-[ 80686.216] (II) DUMMY(0): Not using default mode "864x486" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "864x486" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1024x576" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1024x576" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1368x768" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1368x768" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "2048x1152" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1024x576" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "2048x1152" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1024x576" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "2880x1620" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1440x810" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "2880x1620" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1440x810" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "3200x1800" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "3200x1800" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "3840x2160" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "3840x2160" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "4096x2304" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "2048x1152" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "4096x2304" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "2048x1152" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "5120x2880" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "5120x2880" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "7680x4320" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "3840x2160" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "7680x4320" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "3840x2160" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "15360x8640" (insufficient memory for mode)
-[ 80686.216] (II) DUMMY(0): Not using default mode "7680x4320" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "15360x8640" (insufficient memory for mode)
-[ 80686.216] (II) DUMMY(0): Not using default mode "7680x4320" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1400x900" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "1400x900" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
-[ 80686.216] (II) DUMMY(0): Not using default mode "960x600" (width too large for virtual size)
-[ 80686.217] (II) DUMMY(0): Not using default mode "960x600" (width too large for virtual size)
-[ 80686.217] (II) DUMMY(0): Not using mode "05120x3200" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "3840x2880" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "3840x2560" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "3840x2048" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "2048x2048" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "2560x1600" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1920x1440" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1920x1200" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1920x1080" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1600x1200" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1680x1050" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1600x900" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1400x1050" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1440x900" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1280x1024" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1366x768" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1280x800" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1024x768" (no mode of this name)
-[ 80686.217] (II) DUMMY(0): Not using mode "1024x600" (no mode of this name)
-[ 80686.218] (**) DUMMY(0): Virtual size is 800x600 (pitch 800)
-[ 80686.218] (**) DUMMY(0): *Mode "800x600": 14.5 MHz, 15.9 kHz, 25.2 Hz
-[ 80686.218] (II) DUMMY(0): Modeline "800x600"x25.2   14.50  800 832 880 912  600 614 617 631 (15.9 kHz z)
-[ 80686.218] (**) DUMMY(0): *Default mode "320x200": 15.8 MHz, 37.9 kHz, 85.3 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "320x200"x85.3   15.75  320 336 368 416  200 200 202 222 doublescan -hsync +vsync (37.9 kHz zd)
-[ 80686.218] (**) DUMMY(0):  Mode "800x562": 13.5 MHz, 14.8 kHz, 25.1 Hz
-[ 80686.218] (II) DUMMY(0): Modeline "800x562"x25.1   13.52  800 832 880 912  562 575 578 591 (14.8 kHz)
-[ 80686.218] (**) DUMMY(0):  Mode "800x480": 11.5 MHz, 12.7 kHz, 25.1 Hz
-[ 80686.218] (II) DUMMY(0): Modeline "800x480"x25.1   11.46  800 832 872 904  480 491 493 505 (12.7 kHz)
-[ 80686.218] (**) DUMMY(0):  Default mode "700x525": 89.6 MHz, 93.8 kHz, 85.1 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "700x525"x85.1   89.63  700 752 828 956  525 525 527 551 doublescan -hsync +vsync (93.8 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "700x525": 77.9 MHz, 81.5 kHz, 74.8 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "700x525"x74.8   77.90  700 732 892 956  525 526 532 545 doublescan +hsync +vsync (81.5 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "700x525": 72.5 MHz, 76.5 kHz, 70.1 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "700x525"x70.1   72.53  700 748 824 948  525 525 527 546 doublescan -hsync +vsync (76.5 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "700x525": 61.0 MHz, 64.9 kHz, 60.0 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "700x525"x60.0   61.00  700 744 820 940  525 526 532 541 doublescan +hsync +vsync (64.9 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "800x450": 59.1 MHz, 56.0 kHz, 59.9 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "800x450"x59.9   59.12  800 848 928 1056  450 451 454 467 doublescan -hsync +vsync (56.0 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "640x512": 78.8 MHz, 91.1 kHz, 85.0 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "640x512"x85.0   78.75  640 672 752 864  512 512 514 536 doublescan +hsync +vsync (91.1 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "640x512": 67.5 MHz, 80.0 kHz, 75.0 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "640x512"x75.0   67.50  640 648 720 844  512 512 514 533 doublescan +hsync +vsync (80.0 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "640x512": 54.0 MHz, 64.0 kHz, 60.0 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "640x512"x60.0   54.00  640 664 720 844  512 512 514 533 doublescan +hsync +vsync (64.0 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "720x450": 53.2 MHz, 55.9 kHz, 59.9 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "720x450"x59.9   53.25  720 760 836 952  450 451 454 467 doublescan -hsync +vsync (55.9 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "700x450": 51.8 MHz, 56.0 kHz, 60.0 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "700x450"x60.0   51.75  700 740 812 924  450 451 456 467 doublescan -hsync +vsync (56.0 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "640x480": 74.2 MHz, 85.9 kHz, 85.1 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "640x480"x85.1   74.25  640 672 752 864  480 480 482 505 doublescan +hsync +vsync (85.9 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "640x480": 36.0 MHz, 43.3 kHz, 85.0 Hz
-[ 80686.218] (II) DUMMY(0): Modeline "640x480"x85.0   36.00  640 696 752 832  480 481 484 509 -hsync -vsync (43.3 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "640x480": 31.5 MHz, 37.5 kHz, 75.0 Hz
-[ 80686.218] (II) DUMMY(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "640x480": 31.5 MHz, 37.9 kHz, 72.8 Hz
-[ 80686.218] (II) DUMMY(0): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "640x480": 54.0 MHz, 60.0 kHz, 60.0 Hz (D)
-[ 80686.218] (II) DUMMY(0): Modeline "640x480"x60.0   54.00  640 688 744 900  480 480 482 500 doublescan +hsync +vsync (60.0 kHz d)
-[ 80686.218] (**) DUMMY(0):  Default mode "640x480": 25.2 MHz, 31.5 kHz, 59.9 Hz
-[ 80686.218] (II) DUMMY(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "720x405": 22.5 MHz, 25.1 kHz, 59.5 Hz
-[ 80686.219] (II) DUMMY(0): Modeline "720x405"x59.5   22.50  720 744 808 896  405 408 413 422 -hsync +vsync (25.1 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "720x400": 35.5 MHz, 37.9 kHz, 85.0 Hz
-[ 80686.219] (II) DUMMY(0): Modeline "720x400"x85.0   35.50  720 756 828 936  400 401 404 446 -hsync +vsync (37.9 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "684x384": 42.6 MHz, 47.8 kHz, 59.9 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "684x384"x59.9   42.62  684 720 788 892  384 385 390 399 doublescan -hsync +vsync (47.8 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "680x384": 36.0 MHz, 47.4 kHz, 60.0 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "680x384"x60.0   36.00  680 704 720 760  384 385 390 395 doublescan +hsync -vsync (47.4 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "680x384": 42.4 MHz, 47.7 kHz, 59.8 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "680x384"x59.8   42.38  680 716 784 888  384 385 390 399 doublescan -hsync +vsync (47.7 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "640x400": 31.5 MHz, 37.9 kHz, 85.1 Hz
-[ 80686.219] (II) DUMMY(0): Modeline "640x400"x85.1   31.50  640 672 736 832  400 401 404 445 -hsync +vsync (37.9 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "640x400": 35.5 MHz, 49.3 kHz, 60.0 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "640x400"x60.0   35.50  640 664 680 720  400 401 404 411 doublescan +hsync -vsync (49.3 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "640x400": 41.8 MHz, 49.7 kHz, 59.9 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "640x400"x59.9   41.75  640 676 740 840  400 401 404 415 doublescan -hsync +vsync (49.7 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "576x432": 71.7 MHz, 91.5 kHz, 100.1 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "576x432"x100.1   71.73  576 616 680 784  432 432 434 457 doublescan -hsync +vsync (91.5 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "576x432": 60.8 MHz, 77.5 kHz, 85.2 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "576x432"x85.2   60.75  576 608 672 784  432 432 434 455 doublescan +hsync -vsync (77.5 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "576x432": 59.8 MHz, 77.1 kHz, 85.1 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "576x432"x85.1   59.83  576 612 676 776  432 432 434 453 doublescan -hsync +vsync (77.1 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "576x432": 54.0 MHz, 67.5 kHz, 75.0 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "576x432"x75.0   54.00  576 608 672 800  432 432 434 450 doublescan +hsync +vsync (67.5 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "576x432": 52.5 MHz, 67.6 kHz, 75.0 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "576x432"x75.0   52.49  576 612 676 776  432 432 434 451 doublescan -hsync +vsync (67.6 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "576x432": 48.4 MHz, 63.0 kHz, 70.0 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "576x432"x70.0   48.38  576 612 672 768  432 432 434 450 doublescan -hsync +vsync (63.0 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "576x432": 40.8 MHz, 53.7 kHz, 60.1 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "576x432"x60.1   40.81  576 608 668 760  432 432 434 447 doublescan -hsync +vsync (53.7 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "640x360": 37.2 MHz, 44.8 kHz, 59.9 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "640x360"x59.9   37.25  640 672 736 832  360 361 364 374 doublescan -hsync +vsync (44.8 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "640x360": 18.0 MHz, 22.5 kHz, 59.8 Hz
-[ 80686.219] (II) DUMMY(0): Modeline "640x360"x59.8   18.00  640 664 720 800  360 363 368 376 -hsync +vsync (22.5 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "640x360": 31.9 MHz, 44.3 kHz, 59.8 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "640x360"x59.8   31.88  640 664 680 720  360 361 364 370 doublescan +hsync -vsync (44.3 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "640x360": 17.8 MHz, 22.2 kHz, 59.3 Hz
-[ 80686.219] (II) DUMMY(0): Modeline "640x360"x59.3   17.75  640 688 720 800  360 363 368 374 +hsync -vsync (22.2 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "640x350": 31.5 MHz, 37.9 kHz, 85.1 Hz
-[ 80686.219] (II) DUMMY(0): Modeline "640x350"x85.1   31.50  640 672 736 832  350 382 385 445 +hsync -vsync (37.9 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "512x384i": 22.4 MHz, 35.5 kHz, 86.6 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "512x384i"x86.6   22.45  512 516 604 632  384 384 388 409 interlace doublescan +hsync +vsync (35.5 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "512x384": 47.2 MHz, 68.7 kHz, 85.0 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "512x384"x85.0   47.25  512 536 584 688  384 384 386 404 doublescan +hsync +vsync (68.7 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "512x384": 39.4 MHz, 60.0 kHz, 75.0 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "512x384"x75.0   39.38  512 520 568 656  384 384 386 400 doublescan +hsync +vsync (60.0 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "512x384": 37.5 MHz, 56.5 kHz, 70.1 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "512x384"x70.1   37.50  512 524 592 664  384 385 388 403 doublescan -hsync -vsync (56.5 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "512x384": 32.5 MHz, 48.4 kHz, 60.0 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "512x384"x60.0   32.50  512 524 592 672  384 385 388 403 doublescan -hsync -vsync (48.4 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "512x288": 23.2 MHz, 35.9 kHz, 60.0 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "512x288"x60.0   23.25  512 532 580 648  288 289 292 299 doublescan -hsync +vsync (35.9 kHz d)
-[ 80686.219] (**) DUMMY(0):  Default mode "512x288": 21.0 MHz, 35.5 kHz, 59.9 Hz (D)
-[ 80686.219] (II) DUMMY(0): Modeline "512x288"x59.9   21.00  512 536 552 592  288 289 292 296 doublescan +hsync -vsync (35.5 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "416x312": 28.6 MHz, 49.7 kHz, 74.7 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "416x312"x74.7   28.64  416 432 464 576  312 312 314 333 doublescan -hsync -vsync (49.7 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "480x270": 18.6 MHz, 33.3 kHz, 59.8 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "480x270"x59.8   18.62  480 504 520 560  270 271 274 278 doublescan +hsync -vsync (33.3 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "480x270": 20.4 MHz, 33.5 kHz, 59.6 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "480x270"x59.6   20.38  480 496 544 608  270 271 274 281 doublescan -hsync +vsync (33.5 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "400x300": 28.1 MHz, 53.7 kHz, 85.3 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "400x300"x85.3   28.15  400 416 448 524  300 300 302 315 doublescan +hsync +vsync (53.7 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "400x300": 24.8 MHz, 46.9 kHz, 75.1 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "400x300"x75.1   24.75  400 408 448 528  300 300 302 312 doublescan +hsync +vsync (46.9 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "400x300": 25.0 MHz, 48.1 kHz, 72.2 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "400x300"x72.2   25.00  400 428 488 520  300 318 321 333 doublescan +hsync +vsync (48.1 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "400x300": 20.0 MHz, 37.9 kHz, 60.3 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "400x300"x60.3   20.00  400 420 484 528  300 300 302 314 doublescan +hsync +vsync (37.9 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "400x300": 18.0 MHz, 35.2 kHz, 56.3 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "400x300"x56.3   18.00  400 412 448 512  300 300 301 312 doublescan +hsync +vsync (35.2 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "432x243": 16.2 MHz, 30.3 kHz, 59.9 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "432x243"x59.9   16.25  432 444 484 536  243 244 247 253 doublescan -hsync +vsync (30.3 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "432x243": 15.2 MHz, 29.8 kHz, 59.6 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "432x243"x59.6   15.25  432 456 472 512  243 244 247 250 doublescan +hsync -vsync (29.8 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "320x240": 18.0 MHz, 43.3 kHz, 85.2 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "320x240"x85.2   18.00  320 348 376 416  240 240 242 254 doublescan -hsync -vsync (43.3 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "320x240": 15.8 MHz, 37.5 kHz, 75.0 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "320x240"x75.0   15.75  320 328 360 420  240 240 242 250 doublescan -hsync -vsync (37.5 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "320x240": 15.8 MHz, 37.9 kHz, 72.8 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "320x240"x72.8   15.75  320 332 352 416  240 244 246 260 doublescan -hsync -vsync (37.9 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "320x240": 12.6 MHz, 31.5 kHz, 60.1 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "320x240"x60.1   12.59  320 328 376 400  240 245 246 262 doublescan -hsync -vsync (31.5 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "360x202": 11.2 MHz, 25.1 kHz, 59.5 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "360x202"x59.5   11.25  360 372 404 448  202 204 206 211 doublescan -hsync +vsync (25.1 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "360x200": 17.8 MHz, 37.9 kHz, 85.0 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "360x200"x85.0   17.75  360 378 414 468  200 200 202 223 doublescan -hsync +vsync (37.9 kHz d)
-[ 80686.220] (**) DUMMY(0):  Default mode "320x175": 15.8 MHz, 37.9 kHz, 85.3 Hz (D)
-[ 80686.220] (II) DUMMY(0): Modeline "320x175"x85.3   15.75  320 336 368 416  175 191 192 222 doublescan +hsync -vsync (37.9 kHz d)
-[ 80686.221] (==) DUMMY(0): DPI set to (96, 96)
-[ 80686.221] (II) Loading sub module "fb"
-[ 80686.221] (II) LoadModule: "fb"
-[ 80686.221] (II) Loading /usr/lib/xorg/modules/libfb.so
-[ 80686.221] (II) Module fb: vendor="X.Org Foundation"
-[ 80686.221] 	compiled for 1.19.6, module version = 1.0.0
-[ 80686.221] 	ABI class: X.Org ANSI C Emulation, version 0.4
-[ 80686.221] (II) Loading sub module "ramdac"
-[ 80686.221] (II) LoadModule: "ramdac"
-[ 80686.221] (II) Module "ramdac" already built-in
-[ 80686.221] (--) Depth 24 pixmap format is 32 bpp
-[ 80686.221] (II) DUMMY(0): Using 60840 scanlines of offscreen memory 
-[ 80686.221] (==) DUMMY(0): Backing store enabled
-[ 80686.221] (==) DUMMY(0): Silken mouse enabled
-[ 80686.221] (WW) DUMMY(0): Option "ConstantDPI" is not used
-[ 80686.221] (==) RandR enabled
-[ 80686.227] (II) SELinux: Disabled on system
-[ 80686.227] (II) AIGLX: Screen 0 is not DRI2 capable
-[ 80686.227] (EE) AIGLX: reverting to software rendering
-[ 80686.317] (II) IGLX: enabled GLX_MESA_copy_sub_buffer
-[ 80686.318] (II) IGLX: Loaded and initialized swrast
-[ 80686.318] (II) GLX: Initialized DRISWRAST GL provider for screen 0
-[ 80686.413] (II) LoadModule: "void"
-[ 80686.413] (WW) Warning, couldn't open module void
-[ 80686.414] (II) UnloadModule: "void"
-[ 80686.414] (II) Unloading void
-[ 80686.414] (EE) Failed to load module "void" (module does not exist, 0)
-[ 80686.414] (EE) No input driver matching `void'
-[ 80686.414] (II) Falling back to input driver `libinput'
-[ 80686.414] (II) LoadModule: "libinput"
-[ 80686.414] (WW) Warning, couldn't open module libinput
-[ 80686.414] (II) UnloadModule: "libinput"
-[ 80686.414] (II) Unloading libinput
-[ 80686.414] (EE) Failed to load module "libinput" (module does not exist, 0)
-[ 80686.414] (II) LoadModule: "void"
-[ 80686.414] (WW) Warning, couldn't open module void
-[ 80686.414] (II) UnloadModule: "void"
-[ 80686.414] (II) Unloading void
-[ 80686.414] (EE) Failed to load module "void" (module does not exist, 0)
-[ 80686.414] (EE) No input driver matching `void'
-[ 80686.414] (II) Falling back to input driver `libinput'
-[ 80686.414] (II) LoadModule: "libinput"
-[ 80686.414] (WW) Warning, couldn't open module libinput
-[ 80686.414] (II) UnloadModule: "libinput"
-[ 80686.414] (II) Unloading libinput
-[ 80686.414] (EE) Failed to load module "libinput" (module does not exist, 0)
-[ 80686.436] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80696.437] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80706.437] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80716.437] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80726.437] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80736.439] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80746.440] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80756.440] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80766.440] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80776.441] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80786.442] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80796.442] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80806.443] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80816.444] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80826.445] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80836.445] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80846.445] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80856.446] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80866.446] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80876.450] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80886.500] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80896.500] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80906.500] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80916.501] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80926.502] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80936.502] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80946.503] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80956.503] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80966.503] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80976.504] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80986.504] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 80996.504] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81006.508] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81016.508] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81026.508] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81036.508] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81046.509] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81056.511] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81066.511] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81076.512] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81086.512] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81096.512] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81106.512] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81116.512] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81126.513] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81136.513] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81146.513] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81156.514] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81166.514] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81176.514] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81186.514] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81196.515] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81206.516] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81216.519] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81226.520] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81236.520] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81246.520] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81256.520] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81266.520] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81276.520] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81286.522] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81296.522] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81306.523] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81316.523] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81326.525] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81336.525] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81346.531] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81356.536] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81366.548] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81376.548] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81386.548] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81396.548] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81406.549] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81416.549] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81426.550] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81436.600] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81446.601] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81456.601] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81466.601] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81476.601] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81486.601] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81496.608] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81506.610] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81516.612] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81526.631] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81536.645] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81546.645] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81556.645] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81566.648] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81576.648] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81586.649] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81596.649] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81606.650] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81616.651] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81626.651] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81636.651] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81646.654] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81656.681] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81666.681] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81676.700] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81686.701] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81696.701] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81706.701] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81716.701] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81726.701] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81736.701] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81746.702] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81756.702] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81766.702] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81776.702] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81786.702] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81796.703] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81806.705] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81816.706] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81826.706] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81836.708] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81846.710] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81856.715] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81866.719] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81876.719] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81886.722] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81896.724] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81906.730] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81916.730] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81926.731] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81936.733] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81946.733] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81956.734] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81966.734] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81976.735] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81986.735] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 81996.735] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82006.737] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82016.737] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82026.738] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82036.739] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82046.740] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82056.740] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82066.741] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82076.742] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82086.742] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82096.742] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82106.742] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82116.742] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82126.742] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82136.742] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82146.745] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82156.746] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82166.746] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82176.746] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82186.747] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82196.749] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82206.749] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82216.752] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82226.752] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82236.800] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82246.801] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82256.802] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82266.804] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82276.805] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82286.805] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82296.806] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82306.806] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82316.806] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82326.806] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82336.806] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82346.807] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82356.807] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82366.808] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82376.816] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82386.816] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82396.817] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82406.817] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82416.817] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82426.817] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82436.818] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82446.818] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82456.819] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82466.820] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82476.820] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82486.821] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82496.825] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82506.834] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82516.838] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82526.840] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82536.845] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82546.846] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82556.847] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82566.848] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82576.849] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82586.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82596.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82606.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82616.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82626.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82636.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82646.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82656.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82666.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82676.850] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
-[ 82686.851] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
+[ 16898.581] (==) ModulePath set to "/usr/lib/xorg/modules"
+[ 16898.581] (II) Loader magic: 0x560f9dc38020
+[ 16898.582] (II) Module ABI versions:
+[ 16898.582] 	X.Org ANSI C Emulation: 0.4
+[ 16898.582] 	X.Org Video Driver: 23.0
+[ 16898.582] 	X.Org XInput driver : 24.1
+[ 16898.582] 	X.Org Server Extension : 10.0
+[ 16898.582] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
+[ 16898.585] (II) no primary bus or device found
+[ 16898.585] (II) LoadModule: "glx"
+[ 16898.585] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[ 16898.587] (II) Module glx: vendor="X.Org Foundation"
+[ 16898.608] 	compiled for 1.19.6, module version = 1.0.0
+[ 16898.608] 	ABI class: X.Org Server Extension, version 10.0
+[ 16898.608] (II) LoadModule: "dummy"
+[ 16898.609] (II) Loading /usr/lib/xorg/modules/drivers/dummy_drv.so
+[ 16898.609] (II) Module dummy: vendor="X.Org Foundation"
+[ 16898.610] 	compiled for 1.19.3, module version = 0.3.8
+[ 16898.612] 	Module class: X.Org Video Driver
+[ 16898.612] 	ABI class: X.Org Video Driver, version 23.0
+[ 16898.612] (II) LoadModule: "void"
+[ 16898.616] (WW) Warning, couldn't open module void
+[ 16898.616] (II) UnloadModule: "void"
+[ 16898.616] (II) Unloading void
+[ 16898.616] (EE) Failed to load module "void" (module does not exist, 0)
+[ 16898.616] (II) DUMMY: Driver for Dummy chipsets: dummy
+[ 16898.616] (WW) Falling back to old probe method for dummy
+[ 16898.616] (WW) VGA arbiter: cannot open kernel arbiter, no multi-card support
+[ 16898.616] (II) DUMMY(0): Chipset is a DUMMY
+[ 16898.617] (**) DUMMY(0): Depth 24, (--) framebuffer bpp 32
+[ 16898.617] (==) DUMMY(0): RGB weight 888
+[ 16898.617] (==) DUMMY(0): Default visual is TrueColor
+[ 16898.617] (==) DUMMY(0): Using gamma correction (1.0, 1.0, 1.0)
+[ 16898.617] (DB) xf86MergeOutputClassOptions unsupported bus type 0
+[ 16898.617] (**) DUMMY(0): VideoRAM: 192000 kByte
+[ 16898.617] (--) DUMMY(0): Max Clock: 300000 kHz
+[ 16898.617] (II) DUMMY(0): dummy_monitor: Using hsync range of 5.00-1000.00 kHz
+[ 16898.617] (II) DUMMY(0): dummy_monitor: Using vrefresh range of 5.00-200.00 Hz
+[ 16898.617] (II) DUMMY(0): Clock range:  11.00 to 300.00 MHz
+[ 16898.617] (II) DUMMY(0): Not using mode "32768x32768" (insufficient memory for mode)
+[ 16898.617] (II) DUMMY(0): Not using mode "32768x16384" (insufficient memory for mode)
+[ 16898.617] (II) DUMMY(0): Not using mode "16384x8192" (insufficient memory for mode)
+[ 16898.617] (II) DUMMY(0): Not using mode "8192x4096" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "5496x1200" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "5280x1080" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "5280x1200" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "5120x3200" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "4800x1200" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "3840x2880" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "3840x2560" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "3840x2048" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "3840x1080" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "3600x1200" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "3288x1080" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "2048x2048" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "2048x1536" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "2560x1600" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "2560x1440" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1920x1440" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1920x1200" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1920x1080" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1680x1050" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1600x1200" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1600x900" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1440x900" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1366x768" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1280x1024" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1280x800" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1280x768" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1360x768" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1024x768" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "768x1024" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "800x1280" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1280x800" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "720x1280" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1280x720" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "768x1024" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1024x768" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "600x1024" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1024x600" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "536x960" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "960x536" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "600x800" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "480x854" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "848x480" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "480x800" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "800x1242" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1280x762" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "720x1242" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1280x682" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "768x986" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1024x730" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "600x986" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "1024x562" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "536x922" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "960x498" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "600x762" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "480x810" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "848x442" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using mode "480x762" (height too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using default mode "1024x768i" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using default mode "1280x960" (width too large for virtual size)
+[ 16898.617] (II) DUMMY(0): Not using default mode "1280x960" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "1792x1344" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "896x672" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "1792x1344" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "896x672" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "1856x1392" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "928x696" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "1856x1392" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "928x696" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "960x720" (width too large for virtual size)
+[ 16898.618] (II) DUMMY(0): Not using default mode "960x720" (width too large for virtual size)
+[ 16898.626] (II) DUMMY(0): Not using default mode "832x624" (width too large for virtual size)
+[ 16898.626] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
+[ 16898.626] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
+[ 16898.626] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1152x864" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1400x1050" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1400x1050" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1400x1050" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1400x1050" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1600x1024" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "960x600" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "960x720" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "320x180" (bad mode clock/interlace/doublescan)
+[ 16898.627] (II) DUMMY(0): Not using default mode "320x180" (bad mode clock/interlace/doublescan)
+[ 16898.627] (II) DUMMY(0): Not using default mode "720x405" (monitor doesn't support reduced blanking)
+[ 16898.627] (II) DUMMY(0): Not using default mode "360x202" (bad mode clock/interlace/doublescan)
+[ 16898.627] (II) DUMMY(0): Not using default mode "864x486" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "864x486" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1024x576" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1024x576" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1368x768" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1368x768" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "960x540" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "2048x1152" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1024x576" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "2048x1152" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1024x576" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "2880x1620" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1440x810" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "2880x1620" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1440x810" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "3200x1800" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "3200x1800" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "3840x2160" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "3840x2160" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "4096x2304" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "2048x1152" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "4096x2304" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "2048x1152" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "5120x2880" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "5120x2880" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "7680x4320" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "3840x2160" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "7680x4320" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "3840x2160" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "15360x8640" (insufficient memory for mode)
+[ 16898.627] (II) DUMMY(0): Not using default mode "7680x4320" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "15360x8640" (insufficient memory for mode)
+[ 16898.627] (II) DUMMY(0): Not using default mode "7680x4320" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1400x900" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "1400x900" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "840x525" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "960x600" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using default mode "960x600" (width too large for virtual size)
+[ 16898.627] (II) DUMMY(0): Not using mode "05120x3200" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "3840x2880" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "3840x2560" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "3840x2048" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "2048x2048" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "2560x1600" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1920x1440" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1920x1200" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1920x1080" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1600x1200" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1680x1050" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1600x900" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1400x1050" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1440x900" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1280x1024" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1366x768" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1280x800" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1024x768" (no mode of this name)
+[ 16898.627] (II) DUMMY(0): Not using mode "1024x600" (no mode of this name)
+[ 16898.629] (**) DUMMY(0): Virtual size is 800x600 (pitch 800)
+[ 16898.629] (**) DUMMY(0): *Mode "800x600": 14.5 MHz, 15.9 kHz, 25.2 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "800x600"x25.2   14.50  800 832 880 912  600 614 617 631 (15.9 kHz z)
+[ 16898.629] (**) DUMMY(0): *Default mode "320x200": 15.8 MHz, 37.9 kHz, 85.3 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "320x200"x85.3   15.75  320 336 368 416  200 200 202 222 doublescan -hsync +vsync (37.9 kHz zd)
+[ 16898.629] (**) DUMMY(0):  Mode "800x562": 13.5 MHz, 14.8 kHz, 25.1 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "800x562"x25.1   13.52  800 832 880 912  562 575 578 591 (14.8 kHz)
+[ 16898.629] (**) DUMMY(0):  Mode "800x480": 11.5 MHz, 12.7 kHz, 25.1 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "800x480"x25.1   11.46  800 832 872 904  480 491 493 505 (12.7 kHz)
+[ 16898.629] (**) DUMMY(0):  Default mode "700x525": 89.6 MHz, 93.8 kHz, 85.1 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "700x525"x85.1   89.63  700 752 828 956  525 525 527 551 doublescan -hsync +vsync (93.8 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "700x525": 77.9 MHz, 81.5 kHz, 74.8 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "700x525"x74.8   77.90  700 732 892 956  525 526 532 545 doublescan +hsync +vsync (81.5 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "700x525": 72.5 MHz, 76.5 kHz, 70.1 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "700x525"x70.1   72.53  700 748 824 948  525 525 527 546 doublescan -hsync +vsync (76.5 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "700x525": 61.0 MHz, 64.9 kHz, 60.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "700x525"x60.0   61.00  700 744 820 940  525 526 532 541 doublescan +hsync +vsync (64.9 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "800x450": 59.1 MHz, 56.0 kHz, 59.9 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "800x450"x59.9   59.12  800 848 928 1056  450 451 454 467 doublescan -hsync +vsync (56.0 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x512": 78.8 MHz, 91.1 kHz, 85.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "640x512"x85.0   78.75  640 672 752 864  512 512 514 536 doublescan +hsync +vsync (91.1 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x512": 67.5 MHz, 80.0 kHz, 75.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "640x512"x75.0   67.50  640 648 720 844  512 512 514 533 doublescan +hsync +vsync (80.0 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x512": 54.0 MHz, 64.0 kHz, 60.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "640x512"x60.0   54.00  640 664 720 844  512 512 514 533 doublescan +hsync +vsync (64.0 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "720x450": 53.2 MHz, 55.9 kHz, 59.9 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "720x450"x59.9   53.25  720 760 836 952  450 451 454 467 doublescan -hsync +vsync (55.9 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "700x450": 51.8 MHz, 56.0 kHz, 60.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "700x450"x60.0   51.75  700 740 812 924  450 451 456 467 doublescan -hsync +vsync (56.0 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x480": 74.2 MHz, 85.9 kHz, 85.1 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "640x480"x85.1   74.25  640 672 752 864  480 480 482 505 doublescan +hsync +vsync (85.9 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x480": 36.0 MHz, 43.3 kHz, 85.0 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "640x480"x85.0   36.00  640 696 752 832  480 481 484 509 -hsync -vsync (43.3 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x480": 31.5 MHz, 37.5 kHz, 75.0 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "640x480"x75.0   31.50  640 656 720 840  480 481 484 500 -hsync -vsync (37.5 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x480": 31.5 MHz, 37.9 kHz, 72.8 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "640x480"x72.8   31.50  640 664 704 832  480 489 492 520 -hsync -vsync (37.9 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x480": 54.0 MHz, 60.0 kHz, 60.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "640x480"x60.0   54.00  640 688 744 900  480 480 482 500 doublescan +hsync +vsync (60.0 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x480": 25.2 MHz, 31.5 kHz, 59.9 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "640x480"x59.9   25.18  640 656 752 800  480 490 492 525 -hsync -vsync (31.5 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "720x405": 22.5 MHz, 25.1 kHz, 59.5 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "720x405"x59.5   22.50  720 744 808 896  405 408 413 422 -hsync +vsync (25.1 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "720x400": 35.5 MHz, 37.9 kHz, 85.0 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "720x400"x85.0   35.50  720 756 828 936  400 401 404 446 -hsync +vsync (37.9 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "684x384": 42.6 MHz, 47.8 kHz, 59.9 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "684x384"x59.9   42.62  684 720 788 892  384 385 390 399 doublescan -hsync +vsync (47.8 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "680x384": 36.0 MHz, 47.4 kHz, 60.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "680x384"x60.0   36.00  680 704 720 760  384 385 390 395 doublescan +hsync -vsync (47.4 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "680x384": 42.4 MHz, 47.7 kHz, 59.8 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "680x384"x59.8   42.38  680 716 784 888  384 385 390 399 doublescan -hsync +vsync (47.7 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x400": 31.5 MHz, 37.9 kHz, 85.1 Hz
+[ 16898.629] (II) DUMMY(0): Modeline "640x400"x85.1   31.50  640 672 736 832  400 401 404 445 -hsync +vsync (37.9 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x400": 35.5 MHz, 49.3 kHz, 60.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "640x400"x60.0   35.50  640 664 680 720  400 401 404 411 doublescan +hsync -vsync (49.3 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "640x400": 41.8 MHz, 49.7 kHz, 59.9 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "640x400"x59.9   41.75  640 676 740 840  400 401 404 415 doublescan -hsync +vsync (49.7 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "576x432": 71.7 MHz, 91.5 kHz, 100.1 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "576x432"x100.1   71.73  576 616 680 784  432 432 434 457 doublescan -hsync +vsync (91.5 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "576x432": 60.8 MHz, 77.5 kHz, 85.2 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "576x432"x85.2   60.75  576 608 672 784  432 432 434 455 doublescan +hsync -vsync (77.5 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "576x432": 59.8 MHz, 77.1 kHz, 85.1 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "576x432"x85.1   59.83  576 612 676 776  432 432 434 453 doublescan -hsync +vsync (77.1 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "576x432": 54.0 MHz, 67.5 kHz, 75.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "576x432"x75.0   54.00  576 608 672 800  432 432 434 450 doublescan +hsync +vsync (67.5 kHz d)
+[ 16898.629] (**) DUMMY(0):  Default mode "576x432": 52.5 MHz, 67.6 kHz, 75.0 Hz (D)
+[ 16898.629] (II) DUMMY(0): Modeline "576x432"x75.0   52.49  576 612 676 776  432 432 434 451 doublescan -hsync +vsync (67.6 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "576x432": 48.4 MHz, 63.0 kHz, 70.0 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "576x432"x70.0   48.38  576 612 672 768  432 432 434 450 doublescan -hsync +vsync (63.0 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "576x432": 40.8 MHz, 53.7 kHz, 60.1 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "576x432"x60.1   40.81  576 608 668 760  432 432 434 447 doublescan -hsync +vsync (53.7 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "640x360": 37.2 MHz, 44.8 kHz, 59.9 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "640x360"x59.9   37.25  640 672 736 832  360 361 364 374 doublescan -hsync +vsync (44.8 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "640x360": 18.0 MHz, 22.5 kHz, 59.8 Hz
+[ 16898.630] (II) DUMMY(0): Modeline "640x360"x59.8   18.00  640 664 720 800  360 363 368 376 -hsync +vsync (22.5 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "640x360": 31.9 MHz, 44.3 kHz, 59.8 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "640x360"x59.8   31.88  640 664 680 720  360 361 364 370 doublescan +hsync -vsync (44.3 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "640x360": 17.8 MHz, 22.2 kHz, 59.3 Hz
+[ 16898.630] (II) DUMMY(0): Modeline "640x360"x59.3   17.75  640 688 720 800  360 363 368 374 +hsync -vsync (22.2 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "640x350": 31.5 MHz, 37.9 kHz, 85.1 Hz
+[ 16898.630] (II) DUMMY(0): Modeline "640x350"x85.1   31.50  640 672 736 832  350 382 385 445 +hsync -vsync (37.9 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "512x384i": 22.4 MHz, 35.5 kHz, 86.6 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "512x384i"x86.6   22.45  512 516 604 632  384 384 388 409 interlace doublescan +hsync +vsync (35.5 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "512x384": 47.2 MHz, 68.7 kHz, 85.0 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "512x384"x85.0   47.25  512 536 584 688  384 384 386 404 doublescan +hsync +vsync (68.7 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "512x384": 39.4 MHz, 60.0 kHz, 75.0 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "512x384"x75.0   39.38  512 520 568 656  384 384 386 400 doublescan +hsync +vsync (60.0 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "512x384": 37.5 MHz, 56.5 kHz, 70.1 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "512x384"x70.1   37.50  512 524 592 664  384 385 388 403 doublescan -hsync -vsync (56.5 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "512x384": 32.5 MHz, 48.4 kHz, 60.0 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "512x384"x60.0   32.50  512 524 592 672  384 385 388 403 doublescan -hsync -vsync (48.4 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "512x288": 23.2 MHz, 35.9 kHz, 60.0 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "512x288"x60.0   23.25  512 532 580 648  288 289 292 299 doublescan -hsync +vsync (35.9 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "512x288": 21.0 MHz, 35.5 kHz, 59.9 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "512x288"x59.9   21.00  512 536 552 592  288 289 292 296 doublescan +hsync -vsync (35.5 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "416x312": 28.6 MHz, 49.7 kHz, 74.7 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "416x312"x74.7   28.64  416 432 464 576  312 312 314 333 doublescan -hsync -vsync (49.7 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "480x270": 18.6 MHz, 33.3 kHz, 59.8 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "480x270"x59.8   18.62  480 504 520 560  270 271 274 278 doublescan +hsync -vsync (33.3 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "480x270": 20.4 MHz, 33.5 kHz, 59.6 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "480x270"x59.6   20.38  480 496 544 608  270 271 274 281 doublescan -hsync +vsync (33.5 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "400x300": 28.1 MHz, 53.7 kHz, 85.3 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "400x300"x85.3   28.15  400 416 448 524  300 300 302 315 doublescan +hsync +vsync (53.7 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "400x300": 24.8 MHz, 46.9 kHz, 75.1 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "400x300"x75.1   24.75  400 408 448 528  300 300 302 312 doublescan +hsync +vsync (46.9 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "400x300": 25.0 MHz, 48.1 kHz, 72.2 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "400x300"x72.2   25.00  400 428 488 520  300 318 321 333 doublescan +hsync +vsync (48.1 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "400x300": 20.0 MHz, 37.9 kHz, 60.3 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "400x300"x60.3   20.00  400 420 484 528  300 300 302 314 doublescan +hsync +vsync (37.9 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "400x300": 18.0 MHz, 35.2 kHz, 56.3 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "400x300"x56.3   18.00  400 412 448 512  300 300 301 312 doublescan +hsync +vsync (35.2 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "432x243": 16.2 MHz, 30.3 kHz, 59.9 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "432x243"x59.9   16.25  432 444 484 536  243 244 247 253 doublescan -hsync +vsync (30.3 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "432x243": 15.2 MHz, 29.8 kHz, 59.6 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "432x243"x59.6   15.25  432 456 472 512  243 244 247 250 doublescan +hsync -vsync (29.8 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "320x240": 18.0 MHz, 43.3 kHz, 85.2 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "320x240"x85.2   18.00  320 348 376 416  240 240 242 254 doublescan -hsync -vsync (43.3 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "320x240": 15.8 MHz, 37.5 kHz, 75.0 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "320x240"x75.0   15.75  320 328 360 420  240 240 242 250 doublescan -hsync -vsync (37.5 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "320x240": 15.8 MHz, 37.9 kHz, 72.8 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "320x240"x72.8   15.75  320 332 352 416  240 244 246 260 doublescan -hsync -vsync (37.9 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "320x240": 12.6 MHz, 31.5 kHz, 60.1 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "320x240"x60.1   12.59  320 328 376 400  240 245 246 262 doublescan -hsync -vsync (31.5 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "360x202": 11.2 MHz, 25.1 kHz, 59.5 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "360x202"x59.5   11.25  360 372 404 448  202 204 206 211 doublescan -hsync +vsync (25.1 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "360x200": 17.8 MHz, 37.9 kHz, 85.0 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "360x200"x85.0   17.75  360 378 414 468  200 200 202 223 doublescan -hsync +vsync (37.9 kHz d)
+[ 16898.630] (**) DUMMY(0):  Default mode "320x175": 15.8 MHz, 37.9 kHz, 85.3 Hz (D)
+[ 16898.630] (II) DUMMY(0): Modeline "320x175"x85.3   15.75  320 336 368 416  175 191 192 222 doublescan +hsync -vsync (37.9 kHz d)
+[ 16898.630] (==) DUMMY(0): DPI set to (96, 96)
+[ 16898.630] (II) Loading sub module "fb"
+[ 16898.630] (II) LoadModule: "fb"
+[ 16898.631] (II) Loading /usr/lib/xorg/modules/libfb.so
+[ 16898.631] (II) Module fb: vendor="X.Org Foundation"
+[ 16898.631] 	compiled for 1.19.6, module version = 1.0.0
+[ 16898.631] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[ 16898.631] (II) Loading sub module "ramdac"
+[ 16898.631] (II) LoadModule: "ramdac"
+[ 16898.631] (II) Module "ramdac" already built-in
+[ 16898.631] (--) Depth 24 pixmap format is 32 bpp
+[ 16898.631] (II) DUMMY(0): Using 60840 scanlines of offscreen memory 
+[ 16898.631] (==) DUMMY(0): Backing store enabled
+[ 16898.631] (==) DUMMY(0): Silken mouse enabled
+[ 16898.631] (WW) DUMMY(0): Option "ConstantDPI" is not used
+[ 16898.631] (==) RandR enabled
+[ 16898.642] (II) SELinux: Disabled on system
+[ 16898.643] (II) AIGLX: Screen 0 is not DRI2 capable
+[ 16898.643] (EE) AIGLX: reverting to software rendering
+[ 16898.708] (II) IGLX: enabled GLX_MESA_copy_sub_buffer
+[ 16898.709] (II) IGLX: Loaded and initialized swrast
+[ 16898.709] (II) GLX: Initialized DRISWRAST GL provider for screen 0
+[ 16898.855] (II) LoadModule: "void"
+[ 16898.855] (WW) Warning, couldn't open module void
+[ 16898.855] (II) UnloadModule: "void"
+[ 16898.855] (II) Unloading void
+[ 16898.855] (EE) Failed to load module "void" (module does not exist, 0)
+[ 16898.855] (EE) No input driver matching `void'
+[ 16898.855] (II) Falling back to input driver `libinput'
+[ 16898.855] (II) LoadModule: "libinput"
+[ 16898.855] (WW) Warning, couldn't open module libinput
+[ 16898.855] (II) UnloadModule: "libinput"
+[ 16898.855] (II) Unloading libinput
+[ 16898.855] (EE) Failed to load module "libinput" (module does not exist, 0)
+[ 16898.855] (II) LoadModule: "void"
+[ 16898.857] (WW) Warning, couldn't open module void
+[ 16898.857] (II) UnloadModule: "void"
+[ 16898.857] (II) Unloading void
+[ 16898.857] (EE) Failed to load module "void" (module does not exist, 0)
+[ 16898.857] (EE) No input driver matching `void'
+[ 16898.857] (II) Falling back to input driver `libinput'
+[ 16898.857] (II) LoadModule: "libinput"
+[ 16898.857] (WW) Warning, couldn't open module libinput
+[ 16898.857] (II) UnloadModule: "libinput"
+[ 16898.857] (II) Unloading libinput
+[ 16898.857] (EE) Failed to load module "libinput" (module does not exist, 0)
+[ 16898.897] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
+[ 16908.898] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
+[ 16918.898] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)
+[ 16928.900] (EE) dbus-core: error connecting to system bus: org.freedesktop.DBus.Error.FileNotFound (Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory)

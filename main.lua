@@ -13,7 +13,14 @@ function love.load()
 end
 
 function love.draw()
-  love.graphics.draw(manateeImage, xPos, yPos, 0, 0.3, 0.3)
+  love.graphics.setColor(186, 255, 255)
+  background = love.graphics.rectangle("fill", 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
+  love.graphics.setColor(255, 255, 255)
+
+  love.graphics.draw(player.img, player.xPos, player.yPos, 0, 0.5, 0.5)
+  for index, shockwave in ipairs(shockwaves) do
+    love.graphics.draw(shockwave.img, shockwave.xPos, shockwave.yPos)
+  end
 end
 
 function love.update(dt)
