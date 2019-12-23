@@ -38,11 +38,14 @@ function love.draw()
   for index, shockwave in ipairs(shockwaves) do
     love.graphics.draw(shockwave.img, shockwave.xPos, shockwave.yPos, 0, 0.3, 0.3)
   end
+  for index, enemy in ipairs(enemies) do
+    love.graphics.draw(enemy.img, enemy.xPos, enemy.yPos, 0, 0.3, 0.3)
+  end
 end
 
 function love.update(dt)
   updatePlayer(dt)
-  updateEnemies()
+  updateEnemies(dt)
   updateShockwaves(dt)
 end
 
