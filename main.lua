@@ -10,12 +10,12 @@ function love.load()
   shockwaveStartSpeed = 100
   shockwaveMaxSpeed = 300
 
-  squidSpeed = 200
-  sharkSpeed = 250
-  submarineSpeed = 300
-  chargeSpeed = 500
+  squidSpeed = 100
+  sharkSpeed = 125
+  submarineSpeed = 150
+  chargeSpeed = 250
 
-  spawnTimerMax = 0.5
+  spawnTimerMax = 5
 
   startGame()
 end
