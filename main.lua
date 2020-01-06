@@ -34,7 +34,7 @@ function love.draw()
   love.graphics.setColor(0, 0, 160)
   background = love.graphics.rectangle("fill", 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
   love.graphics.setColor(255, 255, 255)
-  love.graphics.draw(player.img, player.xPos, player.yPos, 0, 0.5, 0.5)
+  love.graphics.draw(player.img, player.xPos, player.yPos, player.angle, 0.5, 0.5)
   for index, shockwave in ipairs(shockwaves) do
     love.graphics.draw(shockwave.img, shockwave.xPos, shockwave.yPos, 0, 0.3, 0.3)
   end
@@ -67,14 +67,23 @@ function updatePlayer(dt)
 
   if down and player.yPos<love.graphics.getHeight()-player.height then
     player.yPos = player.yPos + dt * speed
+    player.angle = 0.1
+    --player.pSystem:setLinearAcceleration(-75, -15, -150, -15)
   elseif up and player.yPos>0 then
     player.yPos = player.yPos - dt * speed
+    player.angle = -0.1
+    --player.pSystem:setLinearAcceleration(-75, 15, -150, 15)
+  else
+    player.angle = 0
+    --player.pSystem:setLinearAcceleration(-75, 0, -150, 0)
   end
 
   if right and player.xPos<love.graphics.getWidth()-player.width then
     player.xPos = player.xPos + dt * speed
+    --player.pSystem:setLinearAcceleration(-75, -15, -150, -15)
   elseif left and player.xPos>0 then
     player.xPos = player.xPos - dt * speed
+    --player.pSystem:setLinearAcceleration(-75, 15, -150, 15)
   end
 
   --Shockwave movement
