@@ -17,6 +17,9 @@
 
   spawnTimerMax = 5
 
+  smallBlast = getBlast(50)
+  blast = getBlast(100)
+
   startGame()
 end
 
@@ -24,7 +27,7 @@ function startGame()
   player = {xPos = 0, yPos = 0, width = 128, height = 64, speed=200, img=manateeImage}
   shockwaves = {}
   enemies = {}
-
+  explosions = {}
   canFire = true
   shockwaveTimer = shockwaveTimerMax
   spawnTimer = 0
@@ -41,12 +44,16 @@ function love.draw()
   for index, enemy in ipairs(enemies) do
     love.graphics.draw(enemy.img, enemy.xPos, enemy.yPos, 0, 0.3, 0.3)
   end
+  for index, explosion in ipairs(explosions) do
+    love.graphics.draw(explosion, 0, 0)
+  end
 end
 
 function love.update(dt)
   updatePlayer(dt)
   updateEnemies(dt)
   updateShockwaves(dt)
+  updateExplosions(dt)
   checkCollisions()
 end
 
@@ -68,22 +75,17 @@ function updatePlayer(dt)
   if down and player.yPos<love.graphics.getHeight()-player.height then
     player.yPos = player.yPos + dt * speed
     player.angle = 0.1
-    --player.pSystem:setLinearAcceleration(-75, -15, -150, -15)
   elseif up and player.yPos>0 then
     player.yPos = player.yPos - dt * speed
     player.angle = -0.1
-    --player.pSystem:setLinearAcceleration(-75, 15, -150, 15)
   else
     player.angle = 0
-    --player.pSystem:setLinearAcceleration(-75, 0, -150, 0)
   end
 
   if right and player.xPos<love.graphics.getWidth()-player.width then
     player.xPos = player.xPos + dt * speed
-    --player.pSystem:setLinearAcceleration(-75, -15, -150, -15)
   elseif left and player.xPos>0 then
     player.xPos = player.xPos - dt * speed
-    --player.pSystem:setLinearAcceleration(-75, 15, -150, 15)
   end
 
   --Shockwave movement
@@ -200,11 +202,19 @@ end
 function checkCollisions()
   for index, enemy in ipairs(enemies) do
     if intersects(player, enemy) or intersects(enemy, player) then
+      local explosion = getExplosion(blast)
+      explosion:setPosition(enemy.xPos + enemy.width/2, enemy.yPos + enemy.height/2)
+      explosion:emit(20)
+      table.insert(explosions, explosion)
       startGame()
     end
 
     for index2, shockwave in ipairs(shockwaves) do
       if intersects(enemy, shockwave) then
+        local explosion = getExplosion(smallBlast)
+        explosion:setPosition(enemy.xPos + enemy.width/2, enemy.yPos + enemy.height/2)
+        explosion:emit(10)
+        table.insert(explosions, explosion)
         table.remove(enemies, index)
         table.remove(shockwaves, index2)
         break
@@ -219,5 +229,33 @@ function intersects(rect1, rect2)
     return true
   else
     return false
+  end
+end
+
+function getBlast(size)
+  local blast = love.graphics.newCanvas(size, size)
+  love.graphics.setCanvas(blast)
+  love.graphics.setColor(255, 255, 255, 255)
+  love.graphics.circle("fill", size/2, size/2, size/2)
+  love.graphics.setCanvas()
+  return blast
+end
+
+function getExplosion(image)
+  pSystem = love.graphics.newParticleSystem(image, 30)
+  pSystem:setParticleLifetime(0.5, 0.5)
+  pSystem:setLinearAcceleration(-100, -100, 100, 100)
+  pSystem:setColors(255, 255, 0, 255, 255, 153, 51, 255, 64, 64, 64, 0)
+  pSystem:setSizes(0.5, 0.5)
+  return pSystem
+end
+
+function updateExplosions(dt)
+  for i = table.getn(explosions), 1, -1 do
+    local explosion = explosions[i]
+    explosion:update(dt)
+    if explosion:getCount() == 0 then
+      table.remove(explosions, i)
+    end
   end
 end
