@@ -200,13 +200,11 @@ end
 function checkCollisions()
   for index, enemy in ipairs(enemies) do
     if intersects(player, enemy) or intersects(enemy, player) then
-      print("Player and ennemy collided")
       startGame()
     end
 
     for index2, shockwave in ipairs(shockwaves) do
       if intersects(enemy, shockwave) then
-        print("Shockwave and ennemy collided")
         table.remove(enemies, index)
         table.remove(shockwaves, index2)
         break
